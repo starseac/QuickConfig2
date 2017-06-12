@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configset   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+  <configpar  name="tab_appset" desc="应用配置"  value="True" />
+  <configpar  name="tab_dbset" desc="数据库配置"  value="True" />
+  <configpar  name="tab_pars" desc="其他参数"  value="True" />
+  <configpar  name="tab_dbinit" desc="数据初始化"  value="True" />
+  <configpar  name="tab_appinit" desc="应用初始化"  value="True" />
+  <configpar  name="tab_tools" desc="其他工具"  value="True" />
+  <configpar  name="tab_backup" desc="备份"  value="True" />
+
+  <configpar  name="btn_set" desc="设置"  value="True" />
+  <configpar  name="btn_chanagexml" desc="切换配置"  value="True" />
+  <configpar  name="btn_helpdoc" desc="帮助文档"  value="True" />
+  <configpar  name="btn_save" desc="保存设置"  value="True" />
+</configset>

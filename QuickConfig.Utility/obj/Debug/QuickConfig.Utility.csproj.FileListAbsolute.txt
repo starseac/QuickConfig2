@@ -1,0 +1,12 @@
+D:\work\QuickConfig2\QuickConfig.Utility\obj\Debug\ResolveAssemblyReference.cache
+D:\work\QuickConfig2\QuickConfig.Utility\bin\Debug\QuickConfig.Utility.dll
+D:\work\QuickConfig2\QuickConfig.Utility\bin\Debug\QuickConfig.Utility.pdb
+D:\work\QuickConfig2\QuickConfig.Utility\bin\Debug\Newtonsoft.Json.dll
+D:\work\QuickConfig2\QuickConfig.Utility\obj\Debug\QuickConfig.Utility.dll
+D:\work\QuickConfig2\QuickConfig.Utility\obj\Debug\QuickConfig.Utility.pdb
+E:\VS\QuickConfig2\QuickConfig.Utility\bin\Debug\QuickConfig.Utility.dll
+E:\VS\QuickConfig2\QuickConfig.Utility\bin\Debug\QuickConfig.Utility.pdb
+E:\VS\QuickConfig2\QuickConfig.Utility\bin\Debug\Newtonsoft.Json.dll
+E:\VS\QuickConfig2\QuickConfig.Utility\obj\Debug\QuickConfig.Utility.csprojResolveAssemblyReference.cache
+E:\VS\QuickConfig2\QuickConfig.Utility\obj\Debug\QuickConfig.Utility.dll
+E:\VS\QuickConfig2\QuickConfig.Utility\obj\Debug\QuickConfig.Utility.pdb

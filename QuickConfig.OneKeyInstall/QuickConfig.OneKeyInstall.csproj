@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69596EED-6FC4-4BA7-AEEE-EB67BA36D704}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickConfig.OneKeyInstall</RootNamespace>
+    <AssemblyName>QuickConfig.OneKeyInstall</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\快速配置\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>闪电.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompleteBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompleteBtn.Designer.cs">
+      <DependentUpon>CompleteBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompleteImage.Designer.cs">
+      <DependentUpon>CompleteImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Install.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Install.Designer.cs">
+      <DependentUpon>Install.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadLicense.Designer.cs">
+      <DependentUpon>ReadLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+    <Compile Include="InstallImages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallImages.Designer.cs">
+      <DependentUpon>InstallImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallProgress.Designer.cs">
+      <DependentUpon>InstallProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartAgree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartAgree.Designer.cs">
+      <DependentUpon>StartAgree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartConfig.Designer.cs">
+      <DependentUpon>StartConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartImage.Designer.cs">
+      <DependentUpon>StartImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartInstallBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartInstallBtn.Designer.cs">
+      <DependentUpon>StartInstallBtn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CompleteBtn.resx">
+      <DependentUpon>CompleteBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompleteImage.resx">
+      <DependentUpon>CompleteImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Install.resx">
+      <DependentUpon>Install.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallImages.resx">
+      <DependentUpon>InstallImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProgress.resx">
+      <DependentUpon>InstallProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReadLicense.resx">
+      <DependentUpon>ReadLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartAgree.resx">
+      <DependentUpon>StartAgree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartConfig.resx">
+      <DependentUpon>StartConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartImage.resx">
+      <DependentUpon>StartImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartInstallBtn.resx">
+      <DependentUpon>StartInstallBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="installConfig\使用协议.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\start.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\complete.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installConfig\install.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installConfig\install.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="installShow\9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="闪电.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickConfig.Common\QuickConfig.Common.csproj">
+      <Project>{722E8591-0415-46A7-9C3D-32BED877CE6E}</Project>
+      <Name>QuickConfig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Model\QuickConfig.Model.csproj">
+      <Project>{08F3E4EA-FD0E-452E-A81A-FE86574A3743}</Project>
+      <Name>QuickConfig.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Utility\QuickConfig.Utility.csproj">
+      <Project>{8C5A6276-0428-4325-B09E-22D6B0478793}</Project>
+      <Name>QuickConfig.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="installPackages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

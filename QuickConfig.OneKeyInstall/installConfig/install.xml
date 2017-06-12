@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install>
+  <package type="webapp" name="测试" xmlname="test" />
+</install>

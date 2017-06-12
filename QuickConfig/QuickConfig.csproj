@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8CE56EE-89CE-4AA8-81CF-66E6E1D10F94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickConfig</RootNamespace>
+    <AssemblyName>QuickConfig</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>QuickConfig</ProductName>
+    <PublisherName>starsea</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\快速配置\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>闪电.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\System32\inetsrv\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickConfig.Model">
+      <HintPath>..\QuickConfig.Model\bin\Debug\QuickConfig.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickConfig.Designer.cs">
+      <DependentUpon>QuickConfig.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuickConfig.resx">
+      <DependentUpon>QuickConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="configTemplate\不动产\cadbin\OVIT.AutoCad.LoadDll.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\CADWebService\bin\OVIT.FRAMEWORK.DBENGINEBASE.dll.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\CADWebService\OVIT.FRAMEWORK.DBENGINEBASE.dll.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\IMServiceHost\OVIT.WebApp.ServiceHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\IMServiceHost\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\IMServiceHost\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\MonitorHost\OVIT.WebApp.MonitorHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\MonitorHost\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\MonitorHost\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\SearchServiceHost\OVIT.WebApp.ServiceHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\SearchServiceHost\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\SearchServiceHost\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\WebAppServiceHost\OVIT.WebApp.ServiceHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\WebAppServiceHost\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\WebAppServiceHost\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\个人中心\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\人事系统\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\公文管理\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\勘测规划\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\勘测规划接口服务\OVIT.Server.WCF.ServiceHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\勘测规划接口服务\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\勘测规划接口服务\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\基础平台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\工作流\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\文件系统\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\文库搜索前台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\文库搜索后台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\考勤考绩\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\考试系统前台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\考试系统后台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\规则引擎\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\项目搜索前台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\勘测规划\项目搜索后台\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\bdc\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="configTemplate\不动产\framework\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\hr\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\qjdc\OVIT.FRAMEWORK.DBENGINEBASE.dll.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\qjdc\OVIT.RightInvestigation.Desktop.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\service\OVIT.WebApp.ServiceHost.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\service\Service_InstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\service\Service_UnInstallUtil.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="configTemplate\不动产\workflow\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="config\app.set">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="doc\配置工具手册.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\7-Zip\7-zip.chm" />
+    <None Include="tools\7-Zip\7z.sfx" />
+    <None Include="tools\7-Zip\7zCon.sfx" />
+    <None Include="tools\7-Zip\descript.ion" />
+    <None Include="tools\7-Zip\Lang\en.ttt" />
+    <None Include="tools\7z_extract.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\7z_package.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\oracle_exp.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\oracle_imp.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tools\Server101.ecp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\Service_Install.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\Service_Start.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\Service_Stop.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\Service_Unistall.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\explorerFolder.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\regaspnet4iis.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\explorerFile.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\sql_exec.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\oracle_expdp.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="configTemplateTemp\" />
+    <Folder Include="Services\" />
+    <Folder Include="toolsTemp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="configTemplate\不动产\cadbin\Configs\BZBProperty.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\cadbin\Configs\OVIT.Auto.Cad.LoadDll.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\IMServiceHost\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\IMServiceHost\Configs\MsgPathSettings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\IMServiceHost\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\MonitorHost\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\SearchServiceHost\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\SearchServiceHost\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\SearchServiceHost\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\WebAppServiceHost\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\WebAppServiceHost\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\个人中心\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\个人中心\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\人事系统\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\人事系统\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\公文管理\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\公文管理\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\勘测规划\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\勘测规划\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\勘测规划接口服务\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\地图搜索\Configs\MapSearchConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\地图搜索\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\基础平台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\基础平台\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\工作流\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\工作流\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\工作流\Configs\WFDesignServices.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文件系统\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文件系统\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文库搜索前台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文库搜索前台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文库搜索后台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\文库搜索后台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考勤考绩\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考勤考绩\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考试系统前台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考试系统前台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考试系统后台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\考试系统后台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\规则引擎\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\规则引擎\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\项目搜索前台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\项目搜索前台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\项目搜索后台\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\勘测规划\项目搜索后台\bin\Configs\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\bdc\bin\Configs\DatabaseConnection.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\bdc\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\framework\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\framework\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\hr\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\hr\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\qjdc\Configs\DataBaseConn\DatabaseConn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\qjdc\Configs\WindowsCred\NativeCred.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WFDesignServices\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WFDesignServices\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WFDesignServices\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WorkflowServices\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WorkflowServices\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\service\Services\WorkflowServices\Configs\WCFServiceHost.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\workflow\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="configTemplate\不动产\workflow\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="configTemplate\不动产\workflow\Configs\WFDesignServices.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\copyPath.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\测试.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\勘测规划.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\start.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\不动产.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\sqls\bdc_updateappinfo.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\7z_package_excludeFolder.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\7z_package_excludeFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\sqls\sys_createdumpdir.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="闪电.ico" />
+    <None Include="Resources\pictureBox1.Image.gif" />
+    <Content Include="Resources\闪电.png" />
+    <Content Include="tools\7-Zip\7-zip.dll" />
+    <Content Include="tools\7-Zip\7z.dll" />
+    <Content Include="tools\7-Zip\7z.exe" />
+    <Content Include="tools\7-Zip\7zFM.exe" />
+    <Content Include="tools\7-Zip\7zG.exe" />
+    <Content Include="tools\7-Zip\History.txt" />
+    <Content Include="tools\7-Zip\Lang\af.txt" />
+    <Content Include="tools\7-Zip\Lang\an.txt" />
+    <Content Include="tools\7-Zip\Lang\ar.txt" />
+    <Content Include="tools\7-Zip\Lang\ast.txt" />
+    <Content Include="tools\7-Zip\Lang\az.txt" />
+    <Content Include="tools\7-Zip\Lang\ba.txt" />
+    <Content Include="tools\7-Zip\Lang\be.txt" />
+    <Content Include="tools\7-Zip\Lang\bg.txt" />
+    <Content Include="tools\7-Zip\Lang\bn.txt" />
+    <Content Include="tools\7-Zip\Lang\br.txt" />
+    <Content Include="tools\7-Zip\Lang\ca.txt" />
+    <Content Include="tools\7-Zip\Lang\co.txt" />
+    <Content Include="tools\7-Zip\Lang\cs.txt" />
+    <Content Include="tools\7-Zip\Lang\cy.txt" />
+    <Content Include="tools\7-Zip\Lang\da.txt" />
+    <Content Include="tools\7-Zip\Lang\de.txt" />
+    <Content Include="tools\7-Zip\Lang\el.txt" />
+    <Content Include="tools\7-Zip\Lang\eo.txt" />
+    <Content Include="tools\7-Zip\Lang\es.txt" />
+    <Content Include="tools\7-Zip\Lang\et.txt" />
+    <Content Include="tools\7-Zip\Lang\eu.txt" />
+    <Content Include="tools\7-Zip\Lang\ext.txt" />
+    <Content Include="tools\7-Zip\Lang\fa.txt" />
+    <Content Include="tools\7-Zip\Lang\fi.txt" />
+    <Content Include="tools\7-Zip\Lang\fr.txt" />
+    <Content Include="tools\7-Zip\Lang\fur.txt" />
+    <Content Include="tools\7-Zip\Lang\fy.txt" />
+    <Content Include="tools\7-Zip\Lang\ga.txt" />
+    <Content Include="tools\7-Zip\Lang\gl.txt" />
+    <Content Include="tools\7-Zip\Lang\gu.txt" />
+    <Content Include="tools\7-Zip\Lang\he.txt" />
+    <Content Include="tools\7-Zip\Lang\hi.txt" />
+    <Content Include="tools\7-Zip\Lang\hr.txt" />
+    <Content Include="tools\7-Zip\Lang\hu.txt" />
+    <Content Include="tools\7-Zip\Lang\hy.txt" />
+    <Content Include="tools\7-Zip\Lang\id.txt" />
+    <Content Include="tools\7-Zip\Lang\io.txt" />
+    <Content Include="tools\7-Zip\Lang\is.txt" />
+    <Content Include="tools\7-Zip\Lang\it.txt" />
+    <Content Include="tools\7-Zip\Lang\ja.txt" />
+    <Content Include="tools\7-Zip\Lang\ka.txt" />
+    <Content Include="tools\7-Zip\Lang\kaa.txt" />
+    <Content Include="tools\7-Zip\Lang\kk.txt" />
+    <Content Include="tools\7-Zip\Lang\ko.txt" />
+    <Content Include="tools\7-Zip\Lang\ku-ckb.txt" />
+    <Content Include="tools\7-Zip\Lang\ku.txt" />
+    <Content Include="tools\7-Zip\Lang\ky.txt" />
+    <Content Include="tools\7-Zip\Lang\lij.txt" />
+    <Content Include="tools\7-Zip\Lang\lt.txt" />
+    <Content Include="tools\7-Zip\Lang\lv.txt" />
+    <Content Include="tools\7-Zip\Lang\mk.txt" />
+    <Content Include="tools\7-Zip\Lang\mn.txt" />
+    <Content Include="tools\7-Zip\Lang\mng.txt" />
+    <Content Include="tools\7-Zip\Lang\mng2.txt" />
+    <Content Include="tools\7-Zip\Lang\mr.txt" />
+    <Content Include="tools\7-Zip\Lang\ms.txt" />
+    <Content Include="tools\7-Zip\Lang\nb.txt" />
+    <Content Include="tools\7-Zip\Lang\ne.txt" />
+    <Content Include="tools\7-Zip\Lang\nl.txt" />
+    <Content Include="tools\7-Zip\Lang\nn.txt" />
+    <Content Include="tools\7-Zip\Lang\pa-in.txt" />
+    <Content Include="tools\7-Zip\Lang\pl.txt" />
+    <Content Include="tools\7-Zip\Lang\ps.txt" />
+    <Content Include="tools\7-Zip\Lang\pt-br.txt" />
+    <Content Include="tools\7-Zip\Lang\pt.txt" />
+    <Content Include="tools\7-Zip\Lang\ro.txt" />
+    <Content Include="tools\7-Zip\Lang\ru.txt" />
+    <Content Include="tools\7-Zip\Lang\sa.txt" />
+    <Content Include="tools\7-Zip\Lang\si.txt" />
+    <Content Include="tools\7-Zip\Lang\sk.txt" />
+    <Content Include="tools\7-Zip\Lang\sl.txt" />
+    <Content Include="tools\7-Zip\Lang\sq.txt" />
+    <Content Include="tools\7-Zip\Lang\sr-spc.txt" />
+    <Content Include="tools\7-Zip\Lang\sr-spl.txt" />
+    <Content Include="tools\7-Zip\Lang\sv.txt" />
+    <Content Include="tools\7-Zip\Lang\ta.txt" />
+    <Content Include="tools\7-Zip\Lang\th.txt" />
+    <Content Include="tools\7-Zip\Lang\tr.txt" />
+    <Content Include="tools\7-Zip\Lang\tt.txt" />
+    <Content Include="tools\7-Zip\Lang\ug.txt" />
+    <Content Include="tools\7-Zip\Lang\uk.txt" />
+    <Content Include="tools\7-Zip\Lang\uz.txt" />
+    <Content Include="tools\7-Zip\Lang\va.txt" />
+    <Content Include="tools\7-Zip\Lang\vi.txt" />
+    <Content Include="tools\7-Zip\Lang\yo.txt" />
+    <Content Include="tools\7-Zip\Lang\zh-cn.txt" />
+    <Content Include="tools\7-Zip\Lang\zh-tw.txt" />
+    <Content Include="tools\7-Zip\License.txt" />
+    <Content Include="tools\7-Zip\readme.txt" />
+    <Content Include="tools\7-Zip\Uninstall.exe" />
+    <Content Include="tt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickConfig.Common\QuickConfig.Common.csproj">
+      <Project>{722E8591-0415-46A7-9C3D-32BED877CE6E}</Project>
+      <Name>QuickConfig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Controls\QuickConfig.Controls.csproj">
+      <Project>{031CE27D-C0CB-42D1-8161-5261655CA197}</Project>
+      <Name>QuickConfig.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Utility\QuickConfig.Utility.csproj">
+      <Project>{8C5A6276-0428-4325-B09E-22D6B0478793}</Project>
+      <Name>QuickConfig.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

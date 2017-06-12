@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <apps name="path_main" label="主目录" path="D:\xjbdc">
+    <webapp name="webapp_wz"
+         label="测试网站"
+         path="D:\xjbdc\web\Workflow"
+         relativepath="web\Workflow"
+         configfolder="网站"
+         sitename="测试网站"
+         ip="127.0.0.1"
+         port="8041"
+         x86bit="true">
+      <virtualdir name="vir_one" virtualname="one" path="D:\xjbdc\web\Workflow\Logs\ORMLogs" />
+      <virtualdir name="vir_two" virtualname="two" path="D:\xjbdc\web\Workflow\Resources\DownLoads" />
+      <virtualdir name="vir_three" virtualname="three" path="D:\xjbdc\web\Workflow\Configs" />
+
+    </webapp>
+
+  </apps>
+
+  <db name="db"
+      label="数据目录"
+      ip="127.0.0.1"
+      datasource="QUICKCONFIG"
+      datafolder_type="true"
+      datafolder="C:\ORACLE\PRODUCT\10.2.0\ORADATA\QUICKCONFIGTEST"
+      cgs=""
+      impfolder="C:\勘测规划\data"
+      >
+    <systemuser
+      name="db_system"
+      label="管理员"
+       user="system"
+      password="sa"
+             />
+
+
+  </db>
+
+  <pars>
+
+  </pars>
+  <definebtns/>
+  <backup name="backup" label="备份目录" path="D:\backup" content="" type="每天" type_daytime="" type_week="" type_weektime="" type_month="" type_monthtime="" />
+
+  <doc>
+    
+  </doc>
+</set>

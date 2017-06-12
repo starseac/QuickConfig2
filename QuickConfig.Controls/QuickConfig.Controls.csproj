@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{031CE27D-C0CB-42D1-8161-5261655CA197}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickConfig.Controls</RootNamespace>
+    <AssemblyName>QuickConfig.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSet\mainFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppSet\mainFolder.Designer.cs">
+      <DependentUpon>mainFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSet\appFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppSet\appFolder.Designer.cs">
+      <DependentUpon>appFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupSet\backupContentSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupSet\backupContentSet.Designer.cs">
+      <DependentUpon>backupContentSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupSet\backupFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupSet\backupFolder.Designer.cs">
+      <DependentUpon>backupFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupSet\backupFolderSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupSet\backupFolderSelect.Designer.cs">
+      <DependentUpon>backupFolderSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupSet\backupSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupSet\backupSet.Designer.cs">
+      <DependentUpon>backupSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupSet\backupTableSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupSet\backupTableSelect.Designer.cs">
+      <DependentUpon>backupTableSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="DbInit\dbInit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbInit\dbInit.Designer.cs">
+      <DependentUpon>dbInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbInit\dmpChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbInit\dmpChoose.Designer.cs">
+      <DependentUpon>dmpChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbInit\gdbChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbInit\gdbChoose.Designer.cs">
+      <DependentUpon>gdbChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbInit\impdataFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbInit\impdataFolder.Designer.cs">
+      <DependentUpon>impdataFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbInit\sdeCoordinateSystemSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbInit\sdeCoordinateSystemSet.Designer.cs">
+      <DependentUpon>sdeCoordinateSystemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSet\dbSdeUserSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbSet\dbSdeUserSet.Designer.cs">
+      <DependentUpon>dbSdeUserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSet\dbSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbSet\dbSet.Designer.cs">
+      <DependentUpon>dbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSet\dbSystemuserSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbSet\dbSystemuserSet.Designer.cs">
+      <DependentUpon>dbSystemuserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSet\dbTableTitleSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbSet\dbTableTitleSet.Designer.cs">
+      <DependentUpon>dbTableTitleSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSet\dbUserSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbSet\dbUserSet.Designer.cs">
+      <DependentUpon>dbUserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\ftpSiteSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\ftpSiteSet.Designer.cs">
+      <DependentUpon>ftpSiteSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\gxmlSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\gxmlSet.Designer.cs">
+      <DependentUpon>gxmlSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\serviceSetGroupBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\serviceSetGroupBox.Designer.cs">
+      <DependentUpon>serviceSetGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\serviceSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\serviceSet.Designer.cs">
+      <DependentUpon>serviceSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteSet.Designer.cs">
+      <DependentUpon>webSiteSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteSetGropuBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteSetGropuBox.Designer.cs">
+      <DependentUpon>webSiteSetGropuBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteVirtualDirctorySet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkSet\webSiteVirtualDirctorySet.Designer.cs">
+      <DependentUpon>webSiteVirtualDirctorySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParsSet\parSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParsSet\parSet.Designer.cs">
+      <DependentUpon>parSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParsSet\parSetGroupBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParsSet\parSetGroupBox.Designer.cs">
+      <DependentUpon>parSetGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemSet\changeXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\changeXML.Designer.cs">
+      <DependentUpon>changeXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editApps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editApps.Designer.cs">
+      <DependentUpon>editApps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\editConfigXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSet\editConfigXML.Designer.cs">
+      <DependentUpon>editConfigXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editBtn.Designer.cs">
+      <DependentUpon>editBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editBtnInput.Designer.cs">
+      <DependentUpon>editBtnInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editControl.Designer.cs">
+      <DependentUpon>editControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editDbSdeUser.Designer.cs">
+      <DependentUpon>editDbSdeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editDbSystemUser.Designer.cs">
+      <DependentUpon>editDbSystemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editDbUser.Designer.cs">
+      <DependentUpon>editDbUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editPar.Designer.cs">
+      <DependentUpon>editPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editServiceApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editServiceApp.Designer.cs">
+      <DependentUpon>editServiceApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editWebApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editWebApp.Designer.cs">
+      <DependentUpon>editWebApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editApp.Designer.cs">
+      <DependentUpon>editApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editFtp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editFtp.Designer.cs">
+      <DependentUpon>editFtp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editGxml.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editGxml.Designer.cs">
+      <DependentUpon>editGxml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editDb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editDb.Designer.cs">
+      <DependentUpon>editDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editBackup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editBackup.Designer.cs">
+      <DependentUpon>editBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\edit\editWebAppVirtualDirctory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\edit\editWebAppVirtualDirctory.Designer.cs">
+      <DependentUpon>editWebAppVirtualDirctory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\show\showSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\show\showSet.Designer.cs">
+      <DependentUpon>showSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\template\addConfigFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\template\addConfigFolder.Designer.cs">
+      <DependentUpon>addConfigFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\template\configTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\template\configTree.Designer.cs">
+      <DependentUpon>configTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\template\fileChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\template\fileChoose.Designer.cs">
+      <DependentUpon>fileChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\template\fileEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\template\fileEdit.Designer.cs">
+      <DependentUpon>fileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSet\template\parChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemSet\template\parChoose.Designer.cs">
+      <DependentUpon>parChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSet\btnDescSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolSet\btnDescSet.Designer.cs">
+      <DependentUpon>btnDescSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSet\btnSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolSet\btnSet.Designer.cs">
+      <DependentUpon>btnSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSet\execUserSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolSet\execUserSet.Designer.cs">
+      <DependentUpon>execUserSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSet\InputSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolSet\InputSet.Designer.cs">
+      <DependentUpon>InputSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\appsConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\appsConfig.Designer.cs">
+      <DependentUpon>appsConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\configCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\configCheck.Designer.cs">
+      <DependentUpon>configCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\ftpSiteInstall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\ftpSiteInstall.Designer.cs">
+      <DependentUpon>ftpSiteInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\gxmlInstall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\gxmlInstall.Designer.cs">
+      <DependentUpon>gxmlInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\serviceInstall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\serviceInstall.Designer.cs">
+      <DependentUpon>serviceInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\webSiteCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\webSiteCheck.Designer.cs">
+      <DependentUpon>webSiteCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSiteSet\webSiteInstall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSiteSet\webSiteInstall.Designer.cs">
+      <DependentUpon>webSiteInstall.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickConfig.Common\QuickConfig.Common.csproj">
+      <Project>{722E8591-0415-46A7-9C3D-32BED877CE6E}</Project>
+      <Name>QuickConfig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Model\QuickConfig.Model.csproj">
+      <Project>{08F3E4EA-FD0E-452E-A81A-FE86574A3743}</Project>
+      <Name>QuickConfig.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickConfig.Utility\QuickConfig.Utility.csproj">
+      <Project>{8C5A6276-0428-4325-B09E-22D6B0478793}</Project>
+      <Name>QuickConfig.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppSet\mainFolder.resx">
+      <DependentUpon>mainFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSet\appFolder.resx">
+      <DependentUpon>appFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupSet\backupContentSet.resx">
+      <DependentUpon>backupContentSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupSet\backupFolder.resx">
+      <DependentUpon>backupFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupSet\backupFolderSelect.resx">
+      <DependentUpon>backupFolderSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupSet\backupSet.resx">
+      <DependentUpon>backupSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupSet\backupTableSelect.resx">
+      <DependentUpon>backupTableSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbInit\dbInit.resx">
+      <DependentUpon>dbInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbInit\dmpChoose.resx">
+      <DependentUpon>dmpChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbInit\gdbChoose.resx">
+      <DependentUpon>gdbChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbInit\impdataFolder.resx">
+      <DependentUpon>impdataFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbInit\sdeCoordinateSystemSet.resx">
+      <DependentUpon>sdeCoordinateSystemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSet\dbSdeUserSet.resx">
+      <DependentUpon>dbSdeUserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSet\dbSet.resx">
+      <DependentUpon>dbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSet\dbSystemuserSet.resx">
+      <DependentUpon>dbSystemuserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSet\dbTableTitleSet.resx">
+      <DependentUpon>dbTableTitleSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSet\dbUserSet.resx">
+      <DependentUpon>dbUserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\ftpSiteSet.resx">
+      <DependentUpon>ftpSiteSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\gxmlSet.resx">
+      <DependentUpon>gxmlSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\serviceSetGroupBox.resx">
+      <DependentUpon>serviceSetGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\serviceSet.resx">
+      <DependentUpon>serviceSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\webSiteSet.resx">
+      <DependentUpon>webSiteSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\webSiteSetGropuBox.resx">
+      <DependentUpon>webSiteSetGropuBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkSet\webSiteVirtualDirctorySet.resx">
+      <DependentUpon>webSiteVirtualDirctorySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParsSet\parSet.resx">
+      <DependentUpon>parSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParsSet\parSetGroupBox.resx">
+      <DependentUpon>parSetGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\changeXML.resx">
+      <DependentUpon>changeXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editApps.resx">
+      <DependentUpon>editApps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\editConfigXML.resx">
+      <DependentUpon>editConfigXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editBtn.resx">
+      <DependentUpon>editBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editBtnInput.resx">
+      <DependentUpon>editBtnInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editControl.resx">
+      <DependentUpon>editControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editDbSdeUser.resx">
+      <DependentUpon>editDbSdeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editDbSystemUser.resx">
+      <DependentUpon>editDbSystemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editDbUser.resx">
+      <DependentUpon>editDbUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editPar.resx">
+      <DependentUpon>editPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editServiceApp.resx">
+      <DependentUpon>editServiceApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editWebApp.resx">
+      <DependentUpon>editWebApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editApp.resx">
+      <DependentUpon>editApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editFtp.resx">
+      <DependentUpon>editFtp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editGxml.resx">
+      <DependentUpon>editGxml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editDb.resx">
+      <DependentUpon>editDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editBackup.resx">
+      <DependentUpon>editBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\edit\editWebAppVirtualDirctory.resx">
+      <DependentUpon>editWebAppVirtualDirctory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\show\showSet.resx">
+      <DependentUpon>showSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\template\addConfigFolder.resx">
+      <DependentUpon>addConfigFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\template\configTree.resx">
+      <DependentUpon>configTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\template\fileChoose.resx">
+      <DependentUpon>fileChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\template\fileEdit.resx">
+      <DependentUpon>fileEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSet\template\parChoose.resx">
+      <DependentUpon>parChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolSet\btnDescSet.resx">
+      <DependentUpon>btnDescSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolSet\btnSet.resx">
+      <DependentUpon>btnSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolSet\execUserSet.resx">
+      <DependentUpon>execUserSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolSet\InputSet.resx">
+      <DependentUpon>InputSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\appsConfig.resx">
+      <DependentUpon>appsConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\configCheck.resx">
+      <DependentUpon>configCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\ftpSiteInstall.resx">
+      <DependentUpon>ftpSiteInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\gxmlInstall.resx">
+      <DependentUpon>gxmlInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\serviceInstall.resx">
+      <DependentUpon>serviceInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\webSiteCheck.resx">
+      <DependentUpon>webSiteCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSiteSet\webSiteInstall.resx">
+      <DependentUpon>webSiteInstall.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editDbSystemUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editDbUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editDbSdeUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editPar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SystemSet\edit\editBtnInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

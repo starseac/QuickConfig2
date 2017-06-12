@@ -1,0 +1,13 @@
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\AutoBackup.AutoBackupServices.resources
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\AutoBackup.ProjectInstaller.resources
+D:\work\QuickConfig2\快速配置\Services\AutoBackup.exe.config
+D:\work\QuickConfig2\快速配置\Services\AutoBackup.exe
+D:\work\QuickConfig2\快速配置\Services\AutoBackup.pdb
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\AutoBackup.exe
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\AutoBackup.pdb
+D:\work\快速配置\Services\AutoBackup.exe.config
+D:\work\快速配置\Services\AutoBackup.exe
+D:\work\快速配置\Services\AutoBackup.pdb
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\work\QuickConfig2\AutoBackup\obj\x86\Debug\GenerateResource.write.1.tlog
